@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A focused GCSE maths lesson with a method, worked example, and practice question.">
+  <title>Learn Maths | Advanced Maths for GCSE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="learn.css">
+  <script src="learn.js" defer></script>
+</head>
+<body class="learn-page">
+  <header class="site-header learn-header">
+    <a class="brand" href="index.html" aria-label="Advanced Maths for GCSE home">
+      <span class="brand-mark">M</span>
+      <span>Advanced Maths for GCSE</span>
+    </a>
+    <a class="back-link" href="subjects.html">&#8592; All subjects</a>
+  </header>
+
+  <main class="lesson-main">
+    <section class="lesson-hero" aria-labelledby="lesson-title">
+      <p class="eyebrow" id="lesson-category">GCSE maths</p>
+      <h1 id="lesson-title">Loading lesson...</h1>
+      <p id="lesson-intro"></p>
+    </section>
+
+    <div class="lesson-layout">
+      <section class="lesson-panel" aria-labelledby="method-title">
+        <p class="eyebrow">Your method</p>
+        <h2 id="method-title">How to approach it</h2>
+        <ol class="steps-list" id="steps-list"></ol>
+      </section>
+
+      <aside class="example-panel" aria-labelledby="example-title">
+        <p class="eyebrow">Worked example</p>
+        <h2 id="example-title">See it in action</h2>
+        <p class="example-question" id="example-question"></p>
+        <p class="example-answer" id="example-answer"></p>
+      </aside>
+    </div>
+
+    <section class="deep-dive-panel" aria-labelledby="deep-dive-title">
+      <div>
+        <p class="eyebrow">Go deeper</p>
+        <h2 id="deep-dive-title">Key ideas to master</h2>
+      </div>
+      <ul class="deep-dive-list" id="deep-dive-list"></ul>
+    </section>
+
+    <section class="video-panel" aria-labelledby="video-title">
+      <div>
+        <p class="eyebrow">Watch and learn</p>
+        <h2 id="video-title">Maths videos for this subject</h2>
+      </div>
+      <div class="video-links" id="video-links"></div>
+    </section>
+
+    <section class="practice-panel" aria-labelledby="practice-title">
+      <div>
+        <p class="eyebrow">Your turn</p>
+        <h2 id="practice-title">Try this question</h2>
+        <p id="practice-question"></p>
+      </div>
+      <details>
+        <summary>Reveal the answer</summary>
+        <p id="practice-answer"></p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="brand-footer">Advanced Maths for GCSE</span>
+    <a href="subjects.html">Choose another subject</a>
+    <span>&copy; 2026</span>
+  </footer>
+</body>
+</html>
