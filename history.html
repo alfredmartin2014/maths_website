@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="history.css">
+  <script src="quiz.js" defer></script>
 </head>
 <body class="history-page">
   <header class="site-header history-header">
@@ -201,6 +202,55 @@
           <p class="timeline-idea"><strong>Your place in the story:</strong> Every new problem gives mathematics another question to describe, test, and solve.</p>
         </div>
       </article>
+    </section>
+
+    <section class="quiz-panel page-quiz" aria-labelledby="quiz-title">
+      <div class="quiz-heading">
+        <p class="eyebrow">From the timeline</p>
+        <h2 id="quiz-title">Maths history test</h2>
+      </div>
+      <form class="quiz-form" data-quiz>
+        <div class="quiz-progress-row">
+          <span>Progress</span>
+          <progress class="quiz-progress" max="5" value="0" aria-label="Quiz progress"></progress>
+          <output class="quiz-progress-text">0 of 5 answered</output>
+        </div>
+        <fieldset class="quiz-question" data-answer="base-60">
+          <legend>1. Which number system did the Babylonians use?</legend>
+          <label><input type="radio" name="history-q1" value="base-10" required> Base 10</label>
+          <label><input type="radio" name="history-q1" value="base-60"> Base 60</label>
+          <label><input type="radio" name="history-q1" value="base-2"> Base 2</label>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="India">
+          <legend>2. Where did the decimal place-value system and modern zero mature?</legend>
+          <label><input type="radio" name="history-q2" value="Greece" required> Greece</label>
+          <label><input type="radio" name="history-q2" value="India"> India</label>
+          <label><input type="radio" name="history-q2" value="Egypt"> Egypt</label>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="Newton and Leibniz">
+          <legend>3. Which mathematicians independently developed calculus?</legend>
+          <label><input type="radio" name="history-q3" value="Euclid and Archimedes" required> Euclid and Archimedes</label>
+          <label><input type="radio" name="history-q3" value="Newton and Leibniz"> Newton and Leibniz</label>
+          <label><input type="radio" name="history-q3" value="Fibonacci and al-Khwarizmi"> Fibonacci and al-Khwarizmi</label>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="Greece">
+          <legend>4. In which ancient civilisation did Euclid organise geometry using definitions and proof?</legend>
+          <label><input type="radio" name="history-q4" value="Egypt" required> Ancient Egypt</label>
+          <label><input type="radio" name="history-q4" value="Greece"> Ancient Greece</label>
+          <label><input type="radio" name="history-q4" value="China"> Ancient China</label>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="computer age">
+          <legend>5. Which era brought electronic computers capable of enormous calculations?</legend>
+          <label><input type="radio" name="history-q5" value="Renaissance"> Renaissance Europe</label>
+          <label><input type="radio" name="history-q5" value="computer age"> The computer age</label>
+          <label><input type="radio" name="history-q5" value="Ancient Greece"> Ancient Greece</label>
+        </fieldset>
+        <div class="quiz-actions">
+          <button type="submit">Check answers</button>
+          <button class="quiz-reset" type="reset">Try again</button>
+          <p class="quiz-result" role="status" aria-live="polite"></p>
+        </div>
+      </form>
     </section>
   </main>
 

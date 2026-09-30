@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="subjects.css">
+  <script src="quiz.js" defer></script>
 </head>
 <body class="subjects-page">
   <header class="site-header catalog-header">
@@ -30,7 +31,7 @@
     <section aria-labelledby="subjects-title">
       <div class="catalog-heading">
         <h2 id="subjects-title">Subject catalogue</h2>
-        <span>24 areas to explore</span>
+        <span>25 areas to explore</span>
       </div>
       <div class="subject-grid">
         <a class="subject-card subject-card-featured" href="learn.html?topic=number">
@@ -153,7 +154,61 @@
           <h3>Proof</h3>
           <p>Build clear mathematical arguments with deduction, contradiction, and counterexamples.</p>
         </a>
+        <a class="subject-card" href="learn.html?topic=calculus">
+          <span class="subject-index">25</span>
+          <h3>Calculus</h3>
+          <p>Explore gradients, rates of change, and how areas can be built from small parts.</p>
+        </a>
       </div>
+    </section>
+
+    <section class="quiz-panel page-quiz" aria-labelledby="quiz-title">
+      <div class="quiz-heading">
+        <p class="eyebrow">Across the catalogue</p>
+        <h2 id="quiz-title">Subject sampler</h2>
+      </div>
+      <form class="quiz-form" data-quiz>
+        <div class="quiz-progress-row">
+          <span>Progress</span>
+          <progress class="quiz-progress" max="5" value="0" aria-label="Quiz progress"></progress>
+          <output class="quiz-progress-text">0 of 5 answered</output>
+        </div>
+        <fieldset class="quiz-question" data-answer="gradient">
+          <legend>1. Which subject studies the gradient and intercept of a straight line?</legend>
+          <label><input type="radio" name="subjects-q1" value="probability" required> Probability</label>
+          <label><input type="radio" name="subjects-q1" value="gradient"> Coordinates</label>
+          <label><input type="radio" name="subjects-q1" value="volume"> Area and volume</label>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="median">
+          <legend>2. Which average is the middle value when data is put in order?</legend>
+          <label><input type="radio" name="subjects-q2" value="mean" required> Mean</label>
+          <label><input type="radio" name="subjects-q2" value="median"> Median</label>
+          <label><input type="radio" name="subjects-q2" value="range"> Range</label>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="1/2">
+          <legend>3. What is the chance of getting heads on a fair coin?</legend>
+          <label><input type="radio" name="subjects-q3" value="1/4" required> 1/4</label>
+          <label><input type="radio" name="subjects-q3" value="1/2"> 1/2</label>
+          <label><input type="radio" name="subjects-q3" value="1"> 1</label>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="6">
+          <legend>4. Solve 3x = 18.</legend>
+          <label><input type="radio" name="subjects-q4" value="5" required> x = 5</label>
+          <label><input type="radio" name="subjects-q4" value="6"> x = 6</label>
+          <label><input type="radio" name="subjects-q4" value="21"> x = 21</label>
+        </fieldset>
+        <fieldset class="quiz-question" data-answer="12">
+          <legend>5. Share 48 in the ratio 1:3. What is the smaller share?</legend>
+          <label><input type="radio" name="subjects-q5" value="8" required> 8</label>
+          <label><input type="radio" name="subjects-q5" value="12"> 12</label>
+          <label><input type="radio" name="subjects-q5" value="36"> 36</label>
+        </fieldset>
+        <div class="quiz-actions">
+          <button type="submit">Check answers</button>
+          <button class="quiz-reset" type="reset">Try again</button>
+          <p class="quiz-result" role="status" aria-live="polite"></p>
+        </div>
+      </form>
     </section>
   </main>
 

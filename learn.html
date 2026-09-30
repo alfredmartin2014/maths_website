@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="learn.css">
   <script src="learn.js" defer></script>
+  <script src="quiz.js" defer></script>
 </head>
 <body class="learn-page">
   <header class="site-header learn-header">
@@ -69,6 +70,20 @@
         <summary>Reveal the answer</summary>
         <p id="practice-answer"></p>
       </details>
+    </section>
+
+    <section class="quiz-panel" aria-labelledby="quiz-title">
+      <div class="quiz-heading">
+        <p class="eyebrow">Check your understanding</p>
+        <h2 id="quiz-title">Topic test</h2>
+      </div>
+      <form class="quiz-form" id="lesson-quiz">
+        <div class="quiz-progress-row">
+          <span>Progress</span>
+          <progress class="quiz-progress" max="5" value="0" aria-label="Quiz progress"></progress>
+          <output class="quiz-progress-text">0 of 5 answered</output>
+        </div>
+      </form>
     </section>
   </main>
 
