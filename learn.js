@@ -1,3 +1,15 @@
+const normaliseMathText = (text) => {
+  if (!text) return text;
+
+  return text
+    .replace(/\bSine\b/gi, 'sin')
+    .replace(/\bCosine\b/gi, 'cos')
+    .replace(/\bTangent\b/gi, 'tan')
+    .replace(/\bInverse sine\b/gi, 'inverse sin')
+    .replace(/\bInverse cosine\b/gi, 'inverse cos')
+    .replace(/\bInverse tangent\b/gi, 'inverse tan');
+};
+
 const lessons = {
   number: { category: 'Foundations', title: 'Number', intro: 'Build fluency with the number skills that support every GCSE topic.', steps: ['Read the question carefully and identify the operation or relationship needed.', 'Estimate the answer first so you can check whether your final result is sensible.', 'Work accurately with fractions, decimals, factors, primes, and order of operations.', 'Check your answer using an inverse operation or a second method.'], example: 'Work out 3/4 + 0.2', answer: '3/4 = 0.75, so 0.75 + 0.2 = 0.95', practice: 'Work out 2.5 x 0.4.', practiceAnswer: '1', },
   algebra: { category: 'Expressions and symbols', title: 'Algebra', intro: 'Use letters to represent unknown values and describe patterns clearly.', steps: ['Identify the variable and what it represents.', 'Simplify like terms by collecting terms with the same variable and power.', 'Substitute known values carefully, using brackets for negative numbers.', 'Check by putting your result back into the original expression.'], example: 'Simplify 4x + 3 - x + 5', answer: 'Collect like terms: 4x - x = 3x and 3 + 5 = 8, so the answer is 3x + 8.', practice: 'Simplify 7a - 2 + 3a + 9.', practiceAnswer: '10a + 7', },
@@ -25,6 +37,17 @@ const lessons = {
   proof: { category: 'Reasoning', title: 'Proof', intro: 'Explain why a mathematical statement must be true, not just why it works once.', steps: ['Start with a general variable or the information given.', 'Use valid algebraic or geometric facts at each step.', 'Avoid relying on one example as proof.', 'Finish with a clear statement that the result is always true.'], example: 'Prove the sum of two odd numbers is even.', answer: 'Let the odd numbers be 2a + 1 and 2b + 1. Their sum is 2a + 2b + 2 = 2(a + b + 1), which is even.', practice: 'Is one example enough to prove a statement for every number?', practiceAnswer: 'No. A proof must use a general argument.', },
 };
 
+Object.values(lessons).forEach((lesson) => {
+  lesson.category = normaliseMathText(lesson.category);
+  lesson.title = normaliseMathText(lesson.title);
+  lesson.intro = normaliseMathText(lesson.intro);
+  lesson.steps = lesson.steps.map(normaliseMathText);
+  lesson.example = normaliseMathText(lesson.example);
+  lesson.answer = normaliseMathText(lesson.answer);
+  lesson.practice = normaliseMathText(lesson.practice);
+  lesson.practiceAnswer = normaliseMathText(lesson.practiceAnswer);
+});
+
 const deepDives = {
   number: ['Use prime factorisation to find highest common factors and lowest common multiples efficiently.', 'Convert recurring decimals to fractions by using algebra when an exact answer is required.', 'Use bounds when values have been rounded: a value rounded to the nearest unit is within half a unit either side.', 'Keep fractions exact until the final step; premature decimals can create rounding errors.'],
   algebra: ['Expand brackets carefully, including negative signs and double brackets such as (x + 3)(x - 2).', 'Factorising reverses expansion: look first for a common factor, then for quadratics and difference of two squares.', 'When substituting a negative value, put it in brackets before applying powers or multiplication.', 'Algebraic fractions can be simplified by factorising the numerator and denominator before cancelling common factors.'],
@@ -51,6 +74,10 @@ const deepDives = {
   quadratics: ['The graph of y = ax² + bx + c opens up when a is positive and down when a is negative.', 'Factorising is quickest when the roots are integers; otherwise use completing the square or the quadratic formula.', 'The discriminant b² - 4ac tells you whether there are two, one, or no real roots.', 'The turning point can be found by completing the square or using x = -b/(2a).'],
   proof: ['A counterexample disproves a universal claim, but one successful example cannot prove one.', 'Use even numbers as 2n and odd numbers as 2n + 1 for general algebraic proofs.', 'For divisibility, finish with a visible factor such as 3k or 5k where k is an integer.', 'Write reasons in a logical order so every line follows from the previous one.'],
 };
+
+Object.keys(deepDives).forEach((topicName) => {
+  deepDives[topicName] = deepDives[topicName].map(normaliseMathText);
+});
 
 const topic = new URLSearchParams(window.location.search).get('topic') || 'number';
 const lesson = lessons[topic] || lessons.number;
