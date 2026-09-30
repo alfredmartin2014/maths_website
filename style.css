@@ -28,7 +28,7 @@ body::before {
   overflow: hidden;
   padding: 54px 4vw;
   color: rgba(120, 130, 142, 0.11);
-  content: "\002B     \00D7     \25CB     \25B3     \25A1     \2220     \002B     \00D7     \25CB     \25B3\A\A     \25A1     \2220     \002B     \00D7     \25CB     \25B3     \25A1     \2220\A\A\A \00D7     \25CB     \25B3     \25A1     \2220     \002B     \00D7     \25CB";
+  content: "\002B     \00D7     \25CB     \25A1     \2220     \002B     \00D7     \25CB     \25A1\A\A     \2220     \002B     \00D7     \25CB     \25A1     \2220\A\A\A \00D7     \25CB     \25A1     \2220     \002B     \00D7     \25CB";
   font-family: var(--display);
   font-size: clamp(24px, 4vw, 54px);
   letter-spacing: 0.16em;
@@ -100,7 +100,6 @@ h1 { max-width: 590px; margin-top: 21px; font-size: clamp(52px, 7vw, 94px); }
 .math-decoration { position: absolute; color: var(--paper); font-family: var(--display); font-weight: 700; }
 .decoration-plus { top: 44px; left: 12%; font-size: 44px; transform: rotate(12deg); }
 .decoration-circle { top: 54px; right: 13%; width: 74px; height: 74px; border: 9px solid var(--coral); border-radius: 50%; }
-.decoration-triangle { right: 12%; bottom: 70px; width: 0; height: 0; border-right: 24px solid transparent; border-bottom: 42px solid var(--deep-sage); border-left: 24px solid transparent; transform: rotate(18deg); }
 .decoration-star { bottom: 64px; left: 13%; color: var(--coral); font-size: 42px; transform: rotate(-10deg); }
 .equation-card { position: absolute; top: 20%; left: 15%; width: 70%; min-height: 245px; display: flex; flex-direction: column; justify-content: center; padding: 32px 38px; transform: rotate(-5deg); color: var(--ink); background: #fdfcf8; box-shadow: 20px 24px 0 rgba(32, 40, 34, 0.14); }
 .equation-label, .equation-hint { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; }
