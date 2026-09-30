@@ -67,12 +67,11 @@ document.querySelector('#practice-question').textContent = lesson.practice;
 document.querySelector('#practice-answer').textContent = lesson.practiceAnswer;
 
 const videoSearches = [
-  ['Watch an explanation', `${lesson.title} GCSE maths explained`],
-  ['See worked examples', `${lesson.title} GCSE maths worked examples`],
-  ['Practise exam questions', `${lesson.title} GCSE maths exam questions`],
+  ['Watch an explanation', 'https://www.youtube.com/results?search_query=Studdied+factorising+double+brackets'],
+  ['See worked examples', 'https://www.youtube.com/results?search_query=Studdied+factorising+into+double+brackets+gcse'],
+  ['Practise exam questions', 'https://www.youtube.com/results?search_query=Studdied+quadratics+factorising+double+brackets+GCSE'],
 ];
 
-document.querySelector('#video-links').innerHTML = videoSearches.map(([label, query]) => {
-  const url = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+document.querySelector('#video-links').innerHTML = videoSearches.map(([label, url]) => {
   return `<a class="video-link" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 }).join('');
