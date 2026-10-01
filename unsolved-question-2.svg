@@ -1,0 +1,22 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9F4F0"/>
+      <stop offset="1" stop-color="#D7EBFB"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="30" fill="url(#bg)"/>
+  <circle cx="118" cy="84" r="36" stroke="#D94747" stroke-width="8" fill="none"/>
+  <path d="M535 66L553 84L535 102" stroke="#176B4A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M553 66L535 84L553 102" stroke="#176B4A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M92 276L118 250L144 276" stroke="#176B4A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="98" y="56" width="440" height="248" rx="18" fill="#FFFDF8" stroke="#176B4A" stroke-opacity="0.18"/>
+  <text x="199" y="158" fill="#176B4A" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="3">CHALLENGE</text>
+  <text x="268" y="92" fill="#176B4A" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="2">OPEN PROBLEM</text>
+  <text x="172" y="160" fill="#176B4A" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Is every even n &gt; 2</text>
+  <text x="172" y="198" fill="#176B4A" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700">the sum of two primes?</text>
+  <rect x="172" y="220" width="180" height="5" fill="#8DBDE0"/>
+  <text x="172" y="250" fill="#486B55" font-size="14" font-family="Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="2">GOLDBACH’S CONJECTURE</text>
+  <text x="487" y="188" fill="#D94747" font-size="64" font-family="Segoe UI, Arial, sans-serif" font-weight="700">?</text>
+  <text x="75" y="312" fill="#D94747" font-size="52" font-family="Segoe UI, Arial, sans-serif" font-weight="700" transform="rotate(-12 75 312)">?</text>
+</svg>
